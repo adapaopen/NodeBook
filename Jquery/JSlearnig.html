@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="renderer" content="webkit">
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		
+		<div class="container-fluid">
+			<div class="page-header"><h1>JQuery</h1></div>
+			<div style="">
+				<table class="table table-striped table-bordered">
+					<thead>
+						<th>#</th>
+						<th>命名</th>
+						<th>意义</th>
+						<th>方法</th>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<th><code>$()</code></th>
+							<th>选择器 </th>
+							<th><code>id:#,class:.,divname</code></th>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<th><code>$('div>p'),$('div p')</code></th>
+							<th>层级选择器 </th>
+							<th>子选择器,儿子选择器</th>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<th><code>$('input[type="text"]')</code></th>
+							<th>选择器</th>
+							<th><code>$('input[type="submit"]'),$('input[type="radio"]')</code></th>
+						</tr>
+						<tr>
+							<th scope="row">4</th>
+							<th><code>$('div:first')</code></th>
+							<th>伪类选择器</th>
+							<th><code>$('div:last')</code></th>
+						</tr>
+						<tr>
+							<th scope="row">5</th>
+							<th><code>$('div').find('div or class')</code></th>
+							<th>查找选择器</th>
+							<th><code>$('div .class')</code></th>
+						</tr>
+						<tr>
+							<th scope="row">6</th>
+							<th><code>$('div').parent()</code></th>
+							<th>父类选择器</th>
+							<th>--</th>
+						</tr>
+						<tr>
+							<th scope="row">7</th>
+							<th><code>$('div:even')</code></th>
+							<th>选择所有偶数的元素，从0开始</th>
+							<th>--</th>
+						</tr>
+						<tr>
+							<th scope="row">8</th>
+							<th><code>$('div:odd')</code></th>
+							<th>选择所有奇数的元素，从0开始</th>
+							<th>--</th>
+						</tr>
+						<tr>
+							<th scope="row">9</th>
+							<th><code>$('div').filter("div or class")</code></th>
+							<th>过滤器,用于同级</th>
+							<th>--</th>
+						</tr>
+						<tr>
+							<th scope="row">10</th>
+							<th><code>$('div').css()</code></th>
+							<th>改变CSS</th>
+							<th><code>$('div').css('color','red'),$('div').css({'color':'red','bgcolor':'yellow'})</code></th>
+						</tr>
+						<tr>
+							<th scope="row">11</th>
+							<th><code>$('div').addClass('className')</code></th>
+							<th>追加class</th>
+							<th>--</th>
+						</tr>
+						<tr>
+							<th scope="row">12</th>
+							<th><code>$('div').removeClass('className')</code></th>
+							<th>删除指定class</th>
+							<th>--</th>
+						</tr>
+						<tr>
+							<th scope="row">13</th>
+							<th><code>$('div').hasClass('className')</code></th>
+							<th>指定元素是否有我们指定的类返回bool</th>
+							<th>--</th>
+						</tr>
+						<tr>
+							<th scope="row">14</th>
+							<th><code>$('div').hide(),$('div').show()</code></th>
+							<th>显示和隐藏</th>
+							<th>--</th>
+						</tr>
+						<tr>
+							<th scope="row">15</th>
+							<th><code>$('div').fadeIn(),$('div').fadeOut()</code></th>
+							<th>带动画的显示和隐藏</th>
+							<th><code>$('div').fadeOut(time)</code>可设置时间毫秒</th>
+						</tr>
+						<tr>
+							<th scope="row">16</th>
+							<th><code>$('div').slideDown(),$('div').slideUp()</code></th>
+							<th>淡入淡出</th>
+							<th><code>$('div').slideDown(time)</code>可设置时间毫秒</th>
+						</tr>
+						<tr>
+							<th scope="row">17</th>
+							<th><code>$('div').text()</code></th>
+							<th>获取元素中的文本</th>
+							<th>--</th>
+						</tr>
+						<tr>
+							<th scope="row">18</th>
+							<th><code>$('div').html()</code></th>
+							<th>获取元素中的HTML内容</th>
+							<th>--</th>
+						</tr>
+						<tr>
+							<th scope="row">19</th>
+							<th><code>$('div').append('...')</code></th>
+							<th>往后追加元素</th>
+							<th><code>$('div'.append('< div>append< /div>'))</code></th>
+						</tr>
+						<tr>
+							<th scope="row">20</th>
+							<th><code>$('div').prepend('...')</code></th>
+							<th>往前追加元素</th>
+							<th><code>$('div'.prepend('< div>prepend< /div>'))</code></th>
+						</tr>
+						<tr>
+							<th scope="row">21</th>
+							<th><code>$('div').remove()</code></th>
+							<th>删除元素</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th scope="row">23</th>
+							<th><code>$(':visible'),$(':hidden')</code></th>
+							<th>元素可见性</th>
+							<th><code>:hidden</code>选择器，不仅仅包含样式是<code>display="none"</code>的元素，还包括隐藏表单、<code>visibility</code>等等</th>
+						</tr>
+						<tr>
+							<th scope="row">24</th>
+							<th><code>目标元素.on('事件'，function)</code></th>
+							<th>事件操作</th>
+							<th><code>$('div').on('click',function(){})</code></th>
+						</tr>
+						<tr>
+							<th scope="row">25</th>
+							<th><code>$('div').mouseenter(function),$('div').mouseleave(function)</code></th>
+							<th>指针移到有事件监听的元素内,指针移出元素范围外（不冒泡）</th>
+							<th>更多事件:https://developer.mozilla.org/zh-CN/docs/Web/Events</th>
+						</tr>
+						<tr>
+							<th scope="row">26</th>
+							<th><code>$('div').attr(),$('div').prop</code></th>
+							<th>获取元素属性，也可以改变属性值<code>{attribute[可操作自定义属性],property}</code></th>
+							<th><code>$('div').attr('href','https://a.com'),$('div').prop('href','https://a.com')</code></th>
+						</tr>
+						<tr>
+							<th scope="row">27</th>
+							<th><code>$('div').removeAttr(),$('div').removeProp()</code></th>
+							<th>删除元素属性值</th>
+							<th><code>$('div').removeAttr('href')</code></th>
+						</tr>
+						<tr>
+							<th scope="row">28</th>
+							<th><code>$('input[type="text"]').val()</code></th>
+							<th>获取表单的val内容，可以设置它的值</th>
+							<th><code>$('input[type="text"]').val("I'm 王花花'")</code></th>
+						</tr>
+						<tr>
+							<th scope="row">29</th>
+							<th><code>$("input").focus(),$("input").focus(fun)</code></th>
+							<th>元素获取焦点</th>
+							<th><code>$("input").focus(function(){$("input").css{"background-color","#FFFFCC"}})</code></th>
+						</tr>
+						<tr>
+							<th scope="row">30</th>
+							<th><code>$("img").load(fun)</code></th>
+							<th>当图像加载时，改变 div 元素的文本</th>
+							<th><code>$("img").load(function(){("div").text("Image loaded");});</code></th>
+						</tr>
+						<tr>
+							<th scope="row">31</th>
+							<th><code>$(document).ready(func)</code></th>
+							<th>在文档加载后激活函数</th>
+							<th><code>提示：ready() 函数不应与 < body onload=""> 一起使用。</code></th>
+						</tr>
+						<tr>
+							<th scope="row">32</th>
+							<th><code>$(selector).after(content)</code></th>
+							<th>after() 方法在被选元素后插入指定的内容。</th>
+							<th><code> $("p").after("<p>Hello world!</p>");</code></th>
+						</tr>
+						<tr>
+							<th scope="row">33</th>
+							<th><code>$(selector).blur(fun)</code></th>
+							<th>当元素失去焦点时发生 blur 事件</th>
+							<th><code> $("input").blur(function(){$("input").css("background-color","#D6D6FF");});</code></th>
+						</tr>
+						<tr>
+							<th scope="row">34</th>
+							<th><code>$(":eq(index)")</code></th>
+							<th>:eq() 选择器选取带有指定 index 值的元素。</th>
+							<th><code> $("p:eq(1)").css("background-color","#D6D6FF")</code></th>
+						</tr>
+						<tr>
+							<th scope="row">35</th>
+							<th><code>$(selector).toggle(speed,callback,switch)</code></th>
+							<th>切换元素的可见状态</th>
+							<th>如果被选元素可见，则隐藏这些元素，如果被选元素隐藏，则显示这些元素<code>$(".btn1").click(function(){$("p").toggle();});</code></th>
+						</tr>
+						<tr>
+							<th scope="row">36</th>
+							<th><code>event.preventDefault()</code></th>
+							<th>方法阻止元素发生默认的行为（例如，当点击提交按钮时阻止对表单的提交)</th>
+							<th><code>$("a").click(function(event){event.preventDefault();});</code></th>
+						</tr>
+						<script type="text/javascript">
+//							document.getElementsByTagName()
+						</script>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+		<div class="container-fluid">
+			<h1 class="page-header">JQ之Ajax</h1>
+			<table class="table table-striped table-bordered">
+				<thead>
+					<th>#</th>
+					<th>常用命名</th>
+					<th>意义</th>
+					<th>注释</th>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<th><code>load(url,data,function(response,status,xhr))</code></th>
+						<th>load()方法通过 AJAX 请求从服务器加载数据，并把返回的数据放置到指定的元素中</th>
+						<th><code>$("div").load('demo_ajax_load.txt');</code></th>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<th><code>$.ajax</code></th>
+						<th>AJAX</th>
+						<th><code>$.ajax('url',{
+				url:'/signup'
+				method:'get | post',
+				data:{
+					username:'whh',
+					password:'asdf'
+				},
+				success:function(data){
+					...
+				},
+				error:function(){
+					..log..
+				}
+			})</code></th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="container-fluid">
+			<h1 class="page-header">常用命名</h1>
+			<table class="table table-striped table-bordered">
+				<thead>
+					<th>#</th>
+					<th>常用命名</th>
+					<th>意义</th>
+					<th>注释</th>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<th><code>toggle</code></th>
+						<th>切换</th>
+						<th>--</th>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<th><code>trigger</code></th>
+						<th>触发</th>
+						<th>--</th>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<th><code>search</code></th>
+						<th>搜索</th>
+						<th>--</th>
+					</tr>
+					<tr>
+						<th scope="row">4</th>
+						<th><code>active</code></th>
+						<th>激活</th>
+						<th>--</th>
+					</tr>
+					<tr>
+						<th scope="row">5</th>
+						<th><code>result</code></th>
+						<th>结果</th>
+						<th>--</th>
+					</tr>
+					<tr>
+						<th scope="row">6</th>
+						<th><code>event</code></th>
+						<th>事件</th>
+						<th>--</th>
+					</tr>
+					<tr>
+						<th scope="row">7</th>
+						<th><code>success,error</code></th>
+						<th>成功，失败</th>
+						<th>--</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
