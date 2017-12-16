@@ -8,7 +8,7 @@
     	<meta name="renderer" content="webkit">
 		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
 		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</head>
@@ -99,65 +99,107 @@
 						<td><code>--</code></td>
 					</tr>
 					<tr>
-						<td scope="row">2</td>
+						<td >2</td>
 						<td><code>[title]</code></td>
 						<td>属性 选择器</td>
 						<td><code>[title]{color:gray;}</code> <code>[type="text"]{color:red;} </code>完全匹配<code>[type^='text']{color:red}</code>匹配以text开头 <code>[tetx$='input']</code>匹配以什么什么结尾<code>a[href^="https://www.a.com"]{color:green}</code></td>
 					</tr>
 					<tr>
-						<td scope="row">3</td>
+						<td >3</td>
 						<td><code>.a *</code></td>
 						<td>后代选择器</td>
 						<td><code>.a *{color:red}</code>class a的后代</td>
 					</tr>
 					<tr>
-						<td scope="row">4</td>
+						<td >4</td>
 						<td><code>.a + div</code></td>
 						<td>与a平行的下一个div(从上往下)</td>
 						<td><code>.a + div{color:red}</code></td>
 					</tr>
 					<tr>
-						<td scope="row">5</td>
+						<td >5</td>
 						<td><code>.a ~ div</code></td>
 						<td>与a平行的所有DIV(从上往下)</td>
 						<td><code>.a ~ div{color:red}</code></td>
 					</tr>
 					<tr>
-						<td scope="row">6</td>
+						<td >6</td>
 						<td><code>a:link{}</code></td>
 						<td>伪类选择器</td>
 						<td><code>a:link</code>没有点击<code>a:visited</code>点击过了<code>a:hover</code>鼠标悬停<code>a:active</code>按下的时候<code>a:focus</code>获取焦点的时候</td>
 					</tr>
 					<tr>
-						<td scope="row">7</td>
+						<td >7</td>
 						<td><code>p:first-letter{}</code></td>
 						<td>伪元素选择器</td>
 						<td><code>p:first-letter{}</code>第一个字母<code>p::after{content:'后面要加的内容';color:'red'}</code>在元素之后<code>a::before{}</code>在元素之前<code>div p::first-child{};div p::last-child{}</code>第一个孩子和最后一个孩子<code>div p::nth-child(2)</code>指定第2个孩子</td>
 					</tr>
 					<tr>
-						<td scope="row">8</td>
+						<td >8</td>
 						<td><code>font</code></td>
 						<td>字体属性</td>
 						<td><code>font-family:"微软雅黑";</code>字体;<code>font-weight:100-900</code>字体粗细;<code>font-size:</code>字体大小;</td>
 					</tr>
 					<tr>
-						<td scope="row">9</td>
+						<td >9</td>
 						<td><code>text</code></td>
 						<td>文本属性</td>
 						<td><code>text-align:（center，left,right,justify两端对齐）</code>文本对齐;<code>line-height:</code>行高;<code>text-deciration:（none，underline下划线，ouerline上滑线，line-through删除线）</code>文字装饰</td>
 					</tr>
 					<tr>
-						<td scope="row">10</td>
+						<td >10</td>
 						<td><code>display</code></td>
 						<td>display</td>
 						<td><code>display:block</code>变成块级元素;<code>display:inline</code>行内元素内联元素;<code>display:inline-block</code>行内块元素;<code>display:none</code>不显示</td>
 					</tr>
 					<tr>
-						<td scope="row">11</td>
+						<td >11</td>
+						<td><code>border</code></td>
+						<td>边框</td>
+						<td><code>border:5px solid red;(size,边框,color)</code><a target="_blank" href="https://raw.githubusercontent.com/adapaopen/NodeBook/master/HTML%20and%20CSS/img/borderStyleCSS.png" class="btn btn-success" title="Border-styleIMG">Border-styleIMG</a></td>
+					</tr>
+					<tr>
+						<td >12</td>
 						<td><code></code></td>
-						<td>框(Block Box) <a href="https://raw.githubusercontent.com/adapaopen/Daily_code/master/BlockBox.png" title="图片">IMG</a></td>
+						<td>框(Block Box) <a target="_blank" href="https://raw.githubusercontent.com/adapaopen/Daily_code/master/BlockBox.png" class="btn btn-success" title="图片">IMG</a></td>
 						<td><code>-- </code></td>
 					</tr>
+					<tr>
+						<td >13</td>
+						<td><code>transition</code></td>
+						<td>CSS3 过渡</td>
+						<td><code>transition: width 2s(动作,时间ms)</code><code>transition: width 2s, height 2s, transform 2s;</code></td>
+					</tr>
+					<tr>
+						<td >14</td>
+						<td><code>border-radius</code></td>
+						<td>CSS3边框</td>
+						<td><code>border-radius: 1-4 length|% / 1-4 length|%;</code>四个值的顺序是：左上角，右上角，右下角，左下角。| 如果省略左下角，右上角是相同的。如果省略右下角，左上角是相同的。如果省略右上角，左上角是相同的。</td>
+					</tr>
+					<tr>
+						<td >15</td>
+						<td><code>box-shadow or text-shadow</code></td>
+						<td>CSS3 阴影</td>
+						<td><code>box-shadow: 10px 10px 5px #888888;</code> | <code>box-shadow: h-shadow v-shadow blur spread color inset;</code><a target="_blank" href="https://raw.githubusercontent.com/adapaopen/NodeBook/master/HTML%20and%20CSS/img/boxShadow.png" title="shadow语法" class="btn btn-success">语法</a></td>
+					</tr>
+					<!--<tr>
+						<td >16</td>
+						<td><code>transition</code></td>
+						<td>CSS3 过渡</td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td >17</td>
+						<td><code>transition</code></td>
+						<td>CSS3 过渡</td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td >18</td>
+						<td><code>transition</code></td>
+						<td>CSS3 过渡</td>
+						<td><code></code></td>
+					</tr>-->
 				</tbody>
 			</table>
 			<h1>常用命名惯例参考</h1>
