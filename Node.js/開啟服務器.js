@@ -7,7 +7,7 @@ var http = require('http'); //導入HTTP模塊
 
 var server = http.createServer(function (req,res) {//req  请求对象 |res   响应对象
     console.log('客戶端向服務器發送請求：'+ req.url);
-    res.writeHead(200,{'Content-type':'text/plain'});
+    res.writeHead(200,{'Content-type':'text/plain'});//設置響應頭
     res.end('Server is working');
 });
 
