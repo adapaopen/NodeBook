@@ -73,12 +73,14 @@
 						<td>接收用户的输入</td>
 						<td><code>type:text文本;password密码,radio单选框,checkbox复选框,file文件,reset重置表单,hedden隐藏输入框,button按钮,textarea大输入框</code></td>
 					</tr>
-					<!--<tr>
+					<tr>
 						<td scope="row">9</td>
-						<td><code>button</code></td>
-						<td>页眉;页脚</td>
-						<td><code></code></td>
-					</tr>-->
+						<td><code>label</code></td>
+						<td>< label> 标签为 input 元素定义标注（标记）</td>
+						<td><code>< label for="male">Male< /label>
+  < input type="checkbox" name="sex" id="male" /></code><label for="male">Male</label>
+  <input type="checkbox" name="sex" id="male" /></td>
+					</tr>
 				</tbody>
 			</table>
 			<h1 class="page-header">HTML and CSS notebook <small>我的CSS复习笔记</small></h1>
@@ -180,7 +182,7 @@
 						<td >15</td>
 						<td><code>box-shadow or text-shadow</code></td>
 						<td>CSS3 阴影</td>
-						<td><code>box-shadow: 10px 10px 5px #888888;</code> | <code>box-shadow: h-shadow v-shadow blur spread color inset;</code><a target="_blank" href="https://raw.githubusercontent.com/adapaopen/NodeBook/master/HTML%20and%20CSS/img/boxShadow.png" title="shadow语法" class="btn btn-success">语法</a></td>
+						<td>box-shadow :{可选} {水平} {垂直} {羽化} {扩充} {颜色}<code>box-shadow: 10px 10px 5px #888888;</code> | <code>box-shadow: h-shadow v-shadow blur spread color inset;</code><a target="_blank" href="https://raw.githubusercontent.com/adapaopen/NodeBook/master/HTML%20and%20CSS/img/boxShadow.png" title="shadow语法" class="btn btn-success">语法</a></td>
 					</tr>
 					<tr>
 						<td >16</td>
@@ -188,21 +190,33 @@
 						<td>当内容溢出元素框时</td>
 						<td><a href="https://raw.githubusercontent.com/adapaopen/NodeBook/master/HTML%20and%20CSS/img/overflow.png" title="style" target="_blank" class="btn btn-success">溢出选择项</a></td>
 					</tr>
-					<!--<tr>
+					<tr>
 						<td >17</td>
-						<td><code>transition</code></td>
-						<td>CSS3 过渡</td>
-						<td><code></code></td>
+						<td><code>clear</code></td>
+						<td>清除浮动</td>
+						<td><code>clear:left;clear:right</code>清除左边的浮动右边的浮动;<code>clear:both;clear:none</code>清除两边的浮动,允许两边的浮动;<code>clear:inherit</code>继承父元素的浮动</td>
 					</tr>
 					<tr>
 						<td >18</td>
-						<td><code>transition</code></td>
-						<td>CSS3 过渡</td>
-						<td><code></code></td>
-					</tr>-->
+						<td><code>position</code></td>
+						<td>规定元素的定位类型</td>
+						<td><code>position:absolute</code>绝对定位,相对于 static定位以外的第一个父元素进行定位<code>position:fixed</code>浮动定位,浏览器窗口进行定位<code>posotion:relative	</code>相对定位,相对于其正常位置进行定位。<code>position:inherit</code>继承父元素</td>
+					</tr>
+					<tr>
+						<td>19</td>
+						<td><code>vertical-align</code></td>
+						<td>vertical-align 属性设置元素的垂直对齐方式</td>
+						<td><code>vertical-align:middle</code>垂直居中<a href="http://www.w3school.com.cn/cssref/pr_pos_vertical-align.asp" title="详细介绍" class="btn btn-info">详细介绍</a></td>
+					</tr>
+					<tr>
+						<td>20</td>
+						<td><code>background-size</code><code>background-repeat</code><code>background-position: center center</code></td>
+						<td>规定背景图像的尺寸</td>
+						<td><code>background-size: length|percentage|cover|contain;</code><code>cover</code>把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。<a href="http://www.w3school.com.cn/cssref/pr_background-size.asp" class="btn btn-info">查看更多</a></td>
+					</tr>
 				</tbody>
 			</table>
-			<h1>常用命名惯例参考</h1>
+			<h1 class="page-header">常用命名惯例参考</h1>
 			<table class="table table-striped table-bordered">
 				<thead>
 					<tr>
@@ -336,6 +350,11 @@
 						<td scope="row"><code>anno</code></td>
 						<td>公告	</td>
 						<td>announcement</td>
+					</tr>
+					<tr>
+						<td scope="row"><code>row;col</code></td>
+						<td>行;列</td>
+						<td>row；column</td>
 					</tr>
 				</tbody>
 			</table>

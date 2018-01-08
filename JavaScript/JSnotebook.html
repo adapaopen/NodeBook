@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScriptNotebook</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="renderer" content="webkit">
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="page-header">JavaScript <small>Notebook</small></h1>
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th scope="row">#</th>
+						<th>命名</th>
+						<th>意义</th>
+						<th>方法</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">1</td>
+						<td><code>alert()</code></td>
+						<td>彈出警告框</td>
+						<td><code>alert("你在幹啥呢！")</code></td>
+					</tr>
+					<tr>
+						<td scope="row">2</td>
+						<td><code>NaN</code></td>
+						<td>Not a Number</td>
+						<td><code>1e4 {10000} 1e2{100} 1.2e4{12000} Infinity無限大  Boolean true1 or 0false</code> <code>Array[]數組</code> <code>Object對象 var o = {a:1,b:2} ;var x = o.a+o.b;</code></td>
+					</tr>
+					<tr>
+						<td scope="row">3</td>
+						<td><code>var</code></td>
+						<td>變量{變量是個筐，它啥都可以裝}</td>
+						<td><code>var 筐 = "土豆";筐 = "花生"</code></td>
+					</tr>
+					<tr>
+						<td scope="row">4</td>
+						<td><code>console.log()</code></td>
+						<td>控制台輸出</td>
+						<td><code>console.log("你幹啥呢！")</code></td>
+					</tr>
+					<tr>
+						<td scope="row">5</td>
+						<td><code>typeof()</code></td>
+						<td>判斷類型</td>
+						<td><code>var kuang = "tudou";console.log(typeof(kuang));</code></td>
+					</tr>
+					<tr>
+						<td scope="row">6</td>
+						<td><code>length()</code></td>
+						<td>查看長度</td>
+						<td><code>var a = ['a','b','c','d'];console.log(a.length);</code></td>
+					</tr>
+					<tr>
+						<td scope="row">7</td>
+						<td><code>if & else</code></td>
+						<td>如果否則</td>
+						<td><code>var isAdmin = false;if(isAdmin){console.log("他是admin")}else if(啪啪啪){console.log("他不是admin")}</code></td>
+					</tr>
+					<tr>
+						<td scope="row">8</td>
+						<td><code>switch</code></td>
+						<td>swith case判斷</td>
+						<td><code>var week=1;switch(week){ case 1:吃飯;break; case 2:睡覺;break; default:不符合以上條件，執行此代碼塊;}</code></td>
+					</tr>
+					<tr>
+						<td scope="row">9</td>
+						<td><code>% & & ||</code></td>
+						<td>運算符</td>
+						<td><code>10%3求餘;var count=0;count++ 自增count--自減  = 賦值 ==判斷 ===嚴格模式判斷</code> <code>& & ：and || ：or</code></td>
+					</tr>
+					<tr>
+						<td scope="row">10</td>
+						<td><code>for(){}</code></td>
+						<td>for循環</td>
+						<td><code>for(var i=1;i<=100;i++){console.log(i)}</code></td>
+					</tr>
+					<tr>
+						<td scope="row">11</td>
+						<td><code>while(){}</code></td>
+						<td>while循環</td>
+						<td><code>var a=1;while(a<5){a++;console.log(a)}</code></td>
+					</tr>
+					<tr>
+						<td scope="row">12</td>
+						<td><code>function</code></td>
+						<td>函數{代碼封裝和控制數據流}</td>
+						<td><code>function 函數名(參數){函數體};函數名()//調用函數</code></td>
+					</tr>
+					<tr>
+						<td scope="row">13</td>
+						<td><code>FUNCTION老司機的CODING</code></td>
+						<td>老司機的代碼標準</td>
+						<td><code>;(code在此處)();</code>  <code>;(function(){
+				function jx(){
+					console.log("jx");
+				}
+				jx();
+			})();</code></td>
+					</tr>
+					<tr>
+						<td scope="row">14</td>
+						<td><code>function(function)</code></td>
+						<td>閉包</td>
+						<td><a href="https://raw.githubusercontent.com/adapaopen/NodeBook/master/JavaScript/%E6%A1%88%E4%BE%8B/%E9%96%89%E5%8C%85.html" class="btn btn-info" target="_blank">查看案例</a></td>
+					</tr>
+					<tr>
+						<td scope="row">16</td>
+						<td><code>window[alert confirm和prompt]</code></td>
+						<td>window提示類的方法</td>
+						<td><code>alert("提示【純提示】")</code> <code>confirm("TorF返回一個用戶反饋")</code> <code>prompt("彈出一個輸入框")</code> <code>alert("hello");
+			var TorF = confirm("你求饒嗎？");
+			console.log(TorF);
+			var username = prompt("親輸入你的名字：");
+			console.log("username:",username);</code></td>
+					</tr>
+					<tr>
+						<td scope="row">17</td>
+						<td><code>setTimeout setInterval和clearInterval</code></td>
+						<td>info window time </td>
+						<td><code>setTimeout(func(),time單位ms)定時器  列：setTimeout(function(){console.log("2s到了"),2000})</code> <code>setInterval(func(),time|ms)間隔超時 列var count=0;setIterval(functin(){count++;console.log(count)},1000)</code> <code>clearinterval(輕蹙是計數器的名稱) 列 var tiome = setInterval(){};clearInterval(tiome)</code></td>
+					</tr>
+					<tr>
+						<td scope="row">18</td>
+						<td><code>Array</code></td>
+						<td>数组</td>
+						<td><code>var arr = []</code> <code>通过.length获取数组的长度 ;.push(新元素) 从末尾添加;.unshift(新元素) 从开头添加;.pop() 从末尾删;.shift() 从开头删;.reverse() 颠倒顺序;.splice(从哪剪, 剪多长, 替换元素1, 替换元素2) 剪接;.slice(从哪剪，在哪停) 剪裁</code></td>
+					</tr>
+					<tr>
+						<td scope="row">19</td>
+						<td><code>Engineering function</code></td>
+						<td>工程函數</td>
+						<td><a href="https://raw.githubusercontent.com/adapaopen/NodeBook/master/JavaScript/%E6%A1%88%E4%BE%8B/%E5%B7%A5%E7%A8%8B%E5%87%BD%E6%95%B8.html" class="btn btn-info">了解更多</a></td>
+					</tr>
+					<tr>
+						<td scope="row">20</td>
+						<td><code>Constructor</code></td>
+						<td>構造函數</td>
+						<td>命名推薦大寫<a href="https://raw.githubusercontent.com/adapaopen/NodeBook/master/JavaScript/%E6%A1%88%E4%BE%8B/%E6%A7%8B%E9%80%A0%E5%87%BD%E6%95%B8.html" class="btn btn-info">了解更多</a></td>
+					</tr>
+					<!--<tr>
+						<td scope="row">21</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td scope="row">22</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td scope="row">23</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td scope="row">24</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td scope="row">25</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td scope="row">26</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td scope="row">27</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td scope="row">28</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td scope="row">29</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td scope="row">30</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>-->
+					<tr>
+						<td scope="row">1</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+				</tbody>
+			</table>
+			<h1 class="page-header">高級深入<small>深入淺出MDN</small></h1>
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th scope="row">#</th>
+						<th>命名</th>
+						<th>意义</th>
+						<th>方法</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">1</td>
+						<td><code>+ -</code></td>
+						<td>隱式轉換</td>
+						<td><code>"16"+16=1616字符串拼接</code> <code>"16"-16=0 加減運算</code> <code>"16"==16 true ==判斷會先轉為number</code> <code>new obj == new obj false</code></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><code>c?a:b</code></td>
+						<td>三元運算符</td>
+						<td><code>return x>y?true:false</code></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td><code>delete</code></td>
+						<td>刪除對象上的屬性</td>
+						<td><code>var obj = {x:1};delete obj.x;</code> 當<code>var obj={};Object.defineProperty(obj,"x",{configurable:false,value:1});delete obj.x;//flse</code>當configurable為false是元素不被delete掉</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td><code>in</code></td>
+						<td>判斷是否有這樣的Key</td>
+						<td><code>window.x=1;"x" in window;//true</code></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td><code>new</code></td>
+						<td>創建新的的對象</td>
+						<td><code>function foo(){};Foo.prototype.x=1;</code></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td><code>prototype</code></td>
+						<td>向对象添加属性和方法</td>
+						<td><code>object.prototype.name=value</code> <code>function foo(){};Foo.prototype.x=1;</code></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td><code></code></td>
+						<td>數組對象初始化表達式</td>
+						<td><code>[1,2] //new Array(1,2)</code> <code>[1,,,4] //[1,undefined,undefined,4]</code> <code>{x:1,y:2} // var 0 = new Object(); o.x=1;o.y=2;</code></td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td><code></code></td>
+						<td>屬性訪問表達式</td>
+						<td><code>var o ={x:1}; o.x;o["x"]</code></td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td><code>try catch</code></td>
+						<td>異常捕獲</td>
+						<td><code>try{throw "test";}catch(ex){console.log(ex);}finally{console.log('finally');}</code>try中有異常執行catch代碼，不管有沒有異常都會執行finally裡面的代碼</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td><code>Function,var=funcion</code></td>
+						<td>函數聲明[函數會前置]和函數表達式</td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td><code>for..in</code></td>
+						<td>遍歷[順序不確定]</td>
+						<td><code>var p;var obj={x:1,y:2};for(p in obj){}</code></td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td><code>"use strict"</code></td>
+						<td>嚴格模式</td>
+						<td><code>function sr(){'use strict';}開啟嚴格模式 也可以在JS文件的前抬頭</code></td>
+					</tr>
+					<tr>
+						<td>13</td>
+						<td><code>object.hasOwnProperty(proName)</code></td>
+						<td>确定某个对象是否具有带指定名称的属性</td>
+						<td><code>var obj ={x:1,y:2};obj.hasOwnProperty('x');//true</code></td>
+					</tr>
+					<tr>
+						<td>14</td>
+						<td><code>Object.create()</code></td>
+						<td>對象創建制定對象原型</td>
+						<td><code>var obj=Object.create(null);obj.toString//undefined</code></td>
+					</tr>
+					<tr>
+						<td>15</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>16</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>17</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>18</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
+
+		

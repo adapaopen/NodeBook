@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>Node.jsNotebook</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="renderer" content="webkit">
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<h1 class="page-header">Node.js <small>Notebook</small></h1>
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th scope="row">#</th>
+						<th>命名</th>
+						<th>意义</th>
+						<th>方法</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">1</td>
+						<td><code>__dirname</code> <code>__filename</code></td>
+						<td>打印目錄</td>
+						<td><code>console.log(__dirname); //不包含文件名的路徑</code> <code>console.log(__filename);//包含文件名的路徑</code></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><code>global</code></td>
+						<td>全局變量</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td><code>module.exports</code></td>
+						<td>模塊</td>
+						<td><code>var cou=func(){};module.exports=cou;//包COU做成模塊 </code>//requirevar <code> var counter = require('./app'); //在new的文件導入模塊文件的地址</code> <code>console.log(counter(['Help','皮醬','Like+']));//調用模塊</code>  OR <code>module.exports = {
+    counter:counter,
+    adder:adder,
+    pi:pi
+}</code></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td><code>setImmediate()</code></td>
+						<td>異步</td>
+						<td>ES6:<code> setImmediate(() =>{
+       console.log('註冊事件');
+       console.log(msg);
+   });</code> ES5: <code>setImmediate(function(){coding;};)</code></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td><code>Events</code></td>
+						<td>事件模塊</td>
+						<td>時間流程：引入模塊->創建EventEmitter對象->註冊事件->觸發事件<a href="https://raw.githubusercontent.com/adapaopen/NodeBook/master/Node.js/Node%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%A1%8A.js" class="btn btn-info">代碼塊</a></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td><code>FS</code></td>
+						<td>文件系統之讀寫文件</td>
+						<td><code>fs.readFile讀取文件</code> <code>fs.writeFile寫入文件</code> 流程:引入fs模塊->調用方法->異常捕獲 <a href="https://raw.githubusercontent.com/adapaopen/NodeBook/master/Node.js/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%B5%B1%E4%B9%8B%E8%AE%80%E5%AF%AB.js" class="btn btn-info">Coding</a></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td><code>FS</code></td>
+						<td>文件系統之文件夾文件操作</td>
+						<td><code>創建文件夾fs.mkdir</code> <code>刪除文件夾fs.rmdir</code> <code>刪除文件fs.unlink</code> 流程:引入fs模塊->調用方法->異常捕獲  <a href="https://raw.githubusercontent.com/adapaopen/NodeBook/master/Node.js/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%B5%B1%E4%B9%8B%E6%96%87%E4%BB%B6%E6%96%87%E4%BB%B6%E5%A4%BE%E6%93%8D%E4%BD%9C.js" class="btn btn-info">Coding</a></td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td><code>HTTP</code></td>
+						<td>HTTP模塊</td>
+						<td><code>http.createServer(function(req;res){};);//創建服務器[http.createServer([requestListener]) <a href="http://www.jb51.net/article/58476.htm" target="_blank">了解更多</a>]</code> <a href="https://github.com/adapaopen/NodeBook/blob/master/Node.js/%E9%96%8B%E5%95%9F%E6%9C%8D%E5%8B%99%E5%99%A8.js" class="btn btn-info"></a>Coding</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td><code>createReadStream;createWriteStream;pipe</code></td>
+						<td>讀寫數據流</td>
+						<td><a href="https://github.com/adapaopen/NodeBook/blob/master/Node.js/%E8%AE%80%E5%AF%AB%E6%95%B8%E6%93%9A%E6%B5%81.js" class="btn btn-info" target="_blank">查看案例</a></td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					
+					<tr>
+						<td>13</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>14</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><code></code></td>
+						<td></td>
+						<td><code></code></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
+
+		
